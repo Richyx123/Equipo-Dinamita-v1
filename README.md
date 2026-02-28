@@ -4,3 +4,5 @@ Plataforma web interactiva que centralice el reporte y la recuperación de objet
 
 ## 🛠️ Proyecto 👨‍💻
 "EncuentraTec: Sistema de Localización de Objetos Extraviados"🔍
+
+## 🔍 Visualización del Maquetado 🗺️
