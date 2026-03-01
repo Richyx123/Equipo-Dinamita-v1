@@ -6,4 +6,4 @@ Se propone una plataforma web interactiva que centralice el reporte y la recuper
 "EncuentraTec: Sistema de Localización de Objetos Extraviados"🔍
 
 ## 🔍 Visualización del Maquetado 🗺️
-![Texto alternativo](Captura de pantalla 2026-02-28 205440.png)
+![Maquetado](https://github.com/Richyx123/Equipo-Dinamita-v1/blob/df68e4c40523370fdc830148432990a1c5c57aac/Captura%20de%20pantalla%202026-02-28%20205440.png)
