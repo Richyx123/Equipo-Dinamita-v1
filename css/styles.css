@@ -1,0 +1,222 @@
+/* Variables de color y base */
+:root {
+    --color-primary: #4C568D;
+    --color-primary-dark: #3b4470;
+    --color-footer: #94A0B6;
+    --color-bg: #f4f4f4;
+}
+
+body {
+    background-color: var(--color-bg);
+    min-height: 100vh;
+}
+
+/* Header */
+header {
+    background: linear-gradient(135deg, #e6E6E6, #cfd3e6);
+    border-bottom: 1px solid #b4b4b4;
+}
+
+.header-content {
+    margin-top: 56px;
+}
+
+.brand h1 {
+    font-size: clamp(2.5rem, 8vw, 4.5rem); /* Reducido de 7rem para evitar desbordes */
+    color: #000;
+}
+
+.brand p {
+    font-size: clamp(1rem, 2vw, 1.5rem);
+    color: #333;
+}
+
+.nav-btn {
+    background-color: var(--color-primary);
+    color: #fff;
+    border-radius: 999px;
+    padding: 0.5rem 1.5rem;
+    font-weight: 600;
+    border: none;
+    font-size: 1.1rem;
+    padding: 1.4rem 4.2rem;
+    transition: background-color 0.2s ease, transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+.nav-btn:hover {
+    background-color: var(--color-primary-dark);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.nav-btn:focus-visible {
+    outline: 3px solid #fff;
+    outline-offset: 2px;
+}
+
+.nav-btn-secondary {
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    color: #fff;
+}
+
+.nav-btn-secondary:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* Main Content */
+main {
+    flex: 1;
+}
+
+/* Hero principal con mural de fondo suave */
+.home-hero {
+    min-height: calc(100vh - 80px);
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    background-image: url("../mural.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.home-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0.94),
+        rgba(255, 255, 255, 0.9)
+    );
+    backdrop-filter: blur(2px);
+    z-index: 0;
+}
+
+.hero-card {
+    position: relative;
+    z-index: 1;
+    background-color: #ffffff;
+    padding: 2rem 1.5rem;
+    border-radius: 2rem;
+    box-shadow: 0 28px 60px rgba(0, 0, 0, 0.22);
+    width: 100%;
+    max-width: 1400px;
+    margin-inline: auto;
+}
+
+.main-logo {
+    max-width: 380px;
+}
+
+h2 {
+    font-size: clamp(2.6rem, 3.4vw, 3.2rem);
+    font-weight: 700;
+}
+
+.main-text {
+    font-size: 1.35rem;
+    line-height: 1.7;
+    max-width: 52rem;
+    margin-inline: auto;
+}
+
+@media (min-width: 992px) {
+    .home-hero {
+        padding-block: 4rem;
+    }
+
+    .hero-card {
+        padding: 4rem 4rem;
+        border-radius: 1.75rem;
+        width: min(94vw, 1400px);
+        min-height: 60vh;
+    }
+
+    .hero-card .btn-lg {
+        padding-block: 1.1rem;
+        font-size: 1.2rem;
+        min-width: 190px;
+    }
+
+    .main-logo {
+        max-width: 340px;
+    }
+
+    h2 {
+        font-size: 3rem;
+    }
+
+    .main-text {
+        font-size: 1.5rem;
+        max-width: 52rem;
+    }
+}
+
+/* Mostrar/ocultar secciones */
+.hidden {
+    display: none !important;
+}
+
+/* Formulario de registro */
+#register-section {
+    animation: fadeIn 0.25s ease-out;
+}
+
+.form-box form {
+    max-width: 480px;
+    margin-inline: auto;
+    background-color: #ffffff;
+    padding: 2.5rem 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.input-group-custom .form-label {
+    font-weight: 600;
+}
+
+.input-group-custom .form-control {
+    padding-block: 0.7rem;
+}
+
+.submit-btn {
+    background-color: var(--color-primary);
+    border-color: var(--color-primary);
+}
+
+.submit-btn:hover {
+    background-color: var(--color-primary-dark);
+    border-color: var(--color-primary-dark);
+}
+
+.back-btn {
+    border-radius: 999px;
+}
+
+/* Footer */
+footer {
+    background-color: var(--color-footer);
+    color: white;
+    font-size: 1.1rem;
+    padding-block: 2.2rem;
+}
+
+.btn-lg {
+    padding-block: 1rem;
+    font-size: 1.1rem;
+}*** End Patch
+
+/* Animaciones */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
